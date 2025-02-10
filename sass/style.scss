@@ -391,10 +391,21 @@ body {
 // news
 .news {
   padding: 60px 0;
+
+  @include mq(pc) {
+    padding: 114px 0 99px;
+    max-width: calc(1280px - 80px * 2);
+    margin: 0 auto;
+  }
 }
 
 .news__inner {
   padding: 0 15px;
+
+  @include mq(pc) {
+    padding-left: calc(95px / 1120px * 100%);
+    padding-right: calc(95px / 1120px * 100%);
+  }
 }
 
 .news__title {
@@ -407,6 +418,11 @@ body {
   position: relative;
   margin-left: 2px;
 
+  @include mq(pc) {
+    font-size: 36px;
+    letter-spacing: 3.6px;
+  }
+
   &::after {
     position: absolute;
     content: "";
@@ -417,11 +433,19 @@ body {
     bottom: -9px;
     left: calc(50% - 2px);
     transform: translateX(-50%);
+
+    @include mq(pc) {
+      bottom: -5px;
+    }
   }
 }
 
 .news__list {
   margin-top: 55px;
+
+  @include mq(pc) {
+    margin-top: 65px;
+  }
 }
 
 .news__item {
@@ -430,6 +454,13 @@ body {
   flex-direction: column;
   gap: 8px;
   position: relative;
+
+  @include mq(pc) {
+    flex-direction: row;
+    align-items: center;
+    gap: 0;
+    padding: 12px 0;
+  }
 
   &::after {
     position: absolute;
@@ -446,18 +477,48 @@ body {
 .news__date {
   color: #333;
   font-size: 14px;
+
+  @include mq(pc) {
+    font-size: 16px;
+    width: 149px;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
 }
 
 .news__headline {
   color: #111;
   font-size: 15px;
+
+  @include mq(pc) {
+    font-size: 16px;
+  }
+}
+
+.news__controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include mq(pc) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+  }
 }
 
 .news__pagination {
   margin-top: 46px;
   display: flex;
-  justify-content: space-between;
+  gap: 20px;
   padding: 0 13px;
+  flex-wrap: wrap;
+
+  @include mq(pc) {
+    margin-top: 0;
+    padding: 0;
+  }
 }
 
 .news__pagination-button {
@@ -469,7 +530,8 @@ body {
   letter-spacing: 1.44px;
   width: 36px;
   height: 36px;
-  // flex-shrink: 0;
+  flex-shrink: 0;
+
   border: 1px solid var(--828282, #828282);
   display: flex;
   justify-content: center;
@@ -492,5 +554,9 @@ body {
   border-radius: 2px;
   border: 1px solid #2392db;
   box-shadow: 4px 3px 26px 0px rgba(0, 0, 0, 0.16);
-  margin: 30px auto 0;
+  margin-top: 30px;
+
+  @include mq(pc) {
+    margin: 0;
+  }
 }
