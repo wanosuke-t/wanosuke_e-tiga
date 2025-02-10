@@ -390,3 +390,125 @@ body {
   background: -webkit-gradient(linear, left top, right top, color-stop(1.75%, #2188de), color-stop(97.75%, #2bcbc6));
   background: linear-gradient(90deg, #2188de 1.75%, #2bcbc6 97.75%);
 }
+
+.news {
+  padding: 60px 0;
+}
+
+.news__inner {
+  padding: 0 15px;
+}
+
+.news__title {
+  color: #238fdc;
+  font-family: Montserrat;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-align: center;
+  position: relative;
+  margin-left: 2px;
+}
+.news__title::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #2bc8c8;
+  bottom: -9px;
+  left: calc(50% - 2px);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.news__list {
+  margin-top: 55px;
+}
+
+.news__item {
+  padding: 10.7px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+.news__item::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background: #e3e3e3;
+}
+
+.news__date {
+  color: #333;
+  font-size: 14px;
+}
+
+.news__headline {
+  color: #111;
+  font-size: 15px;
+}
+
+.news__pagination {
+  margin-top: 46px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 13px;
+}
+
+.news__pagination-button {
+  color: #707070;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 1.44px;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--828282, #828282);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.news__pagination-button--current {
+  color: #fff;
+  background: #228ddd;
+  border: 0;
+}
+
+.news__archive {
+  color: #2392db;
+  font-weight: 700;
+  letter-spacing: 3px;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 4px 21px 4px 23px;
+  border-radius: 2px;
+  border: 1px solid #2392db;
+  -webkit-box-shadow: 4px 3px 26px 0px rgba(0, 0, 0, 0.16);
+          box-shadow: 4px 3px 26px 0px rgba(0, 0, 0, 0.16);
+  margin: 30px auto 0;
+}
