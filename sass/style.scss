@@ -36,7 +36,11 @@ body {
 
 .bgc {
   background: $background-gradation;
-  padding-bottom: 80px;
+  padding-bottom: calc(80px - 0.375px);
+
+  @include mq(pc) {
+    padding-bottom: 0;
+  }
 }
 
 // header
@@ -52,9 +56,9 @@ body {
   position: relative;
 
   @include mq(pc) {
-    max-width: $width-inner;
+    max-width: calc(1280px - 40px * 2 + 25px * 2);
     margin: 0 auto;
-    padding: 0 30px;
+    padding: 0 25px;
   }
 }
 
@@ -76,12 +80,14 @@ body {
   @include mq(pc) {
     display: flex;
     align-items: center;
+    margin-left: 41px;
+    gap: 1px;
   }
 }
 
 .header__link {
   display: inline-block;
-  padding: 26px 22px;
+  padding: 26px 22px 34px;
   font-weight: 500;
 }
 
@@ -107,10 +113,11 @@ body {
     color: #f6f7f7;
     font-weight: 700;
     letter-spacing: 3px;
-    padding: 9px 54px;
+    padding: 9px 51px 9px 54px;
     border-radius: 48px;
     background: $color-gradation;
     box-shadow: 4px 3px 26px 0px rgba(0, 0, 0, 0.16);
+    margin-bottom: 3px;
   }
 }
 
@@ -121,8 +128,8 @@ body {
   width: 40px;
   height: 20px;
   position: relative;
-  top: -1.5px;
-  left: -1.5px;
+  top: -6px;
+  left: -2px;
 
   @include mq(pc) {
     display: none;
@@ -153,9 +160,11 @@ body {
 .mv {
   max-width: calc(100% - 15px * 2);
   margin: 0 auto;
+  margin-top: 13px;
 
   @include mq(pc) {
     max-width: calc(100% - 30px * 2);
+    margin-top: 0;
   }
 }
 
@@ -165,7 +174,7 @@ body {
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
-    padding: 31px 30px 50px;
+    padding: 0 30px 50px;
     max-width: calc(1120px + 30px * 2);
     margin: 0 auto;
   }
@@ -173,7 +182,10 @@ body {
 
 .mv__img {
   text-align: center;
-  margin-top: 20px;
+
+  @include mq(pc) {
+    margin-top: 23px;
+  }
 
   img {
     width: 398px;
@@ -195,6 +207,10 @@ body {
 .mv__logo {
   margin-top: 40px;
 
+  @include mq(pc) {
+    margin-top: 22px;
+  }
+
   img {
     width: 250px;
   }
@@ -214,6 +230,7 @@ body {
 .mv__description {
   line-height: 200%;
   margin-top: 20px;
+  padding-left: 3px;
 }
 
 .mv__button {
@@ -225,7 +242,7 @@ body {
     font-weight: 700;
     letter-spacing: 3px;
     display: inline-block;
-    padding: 9px 54px;
+    padding: 9px 51px 9px 54px;
     border-radius: 48px;
     box-shadow: 4px 3px 26px 0px rgba(0, 0, 0, 0.16);
     background: linear-gradient(90deg, #2188de 1.75%, #2bcbc6 97.75%);
@@ -237,9 +254,12 @@ body {
   padding: 60px 38px 60px 30px;
 
   @include mq(pc) {
-    padding: 100px 80px 100px 80px;
+    padding: 100px 80px;
   }
 
+  @include mq(tb) {
+    padding: 100px 47px;
+  }
 }
 
 .blog__inner {
@@ -255,7 +275,11 @@ body {
   @include mq(pc) {
     display: flex;
     align-items: center;
-    gap: 28px;
+    gap: 25px;
+  }
+
+  @include mq(tb) {
+    margin: 0 33px;
   }
 }
 
@@ -273,21 +297,24 @@ body {
   font-size: 14px;
   letter-spacing: 2.66px;
   display: block;
+  margin-top: 3px;
 }
 
 .blog__list {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  gap: 16px;
-  margin-top: 46px;
+  gap: 16.4px;
+  margin-top: 45px;
 
   @include mq(pc) {
     grid-template-columns: repeat(3, 1fr);
     gap: 34px 20px;
+    margin-top: 40px;
   }
 
   @include mq(tb) {
     grid-template-columns: repeat(2, 1fr);
+    margin-top: 60px;
   }
 }
 
@@ -295,7 +322,7 @@ body {
   border-radius: 4px;
   background: var(--rgb-255255255, #fff);
   box-shadow: 5px 7px 34px 0px #f1f1f1;
-  padding: 12px 15px 16px 15px;
+  padding: 12px 15px 13px;
   margin: 0 auto;
 }
 
@@ -315,7 +342,7 @@ body {
   font-weight: 700;
   line-height: normal;
   text-align: center;
-  padding: 3px 32px;
+  padding: 3px 32px 4px;
   top: 0;
   right: 0;
 }
@@ -331,12 +358,23 @@ body {
 
 .blog__item-text {
   font-size: 13px;
-  margin-top: 4px;
+  margin-top: 5px;
 }
 
 .blog__button {
   margin-top: 46px;
   text-align: center;
+
+  @include mq(pc) {
+    margin-top: 46px;
+    margin-left: 2px;
+  }
+
+  @include mq(tb) {
+    margin-top: 61px;
+    margin-left: 0;
+    margin-right: 1px;
+  }
 
   a {
     color: #f6f7f7;
@@ -344,7 +382,7 @@ body {
     letter-spacing: 3px;
     text-align: center;
     display: inline-block;
-    padding: 9px 54px;
+    padding: 9px 51px 9px 54px;
     border-radius: 48px;
     box-shadow: 4px 3px 26px 0px rgba(0, 0, 0, 0.16);
     background: linear-gradient(90deg, #2188de 1.75%, #2bcbc6 97.75%);
