@@ -609,3 +609,96 @@ body {
     margin: 0;
   }
 }
+
+.concept {
+  padding: 60px 0;
+  background: #f4fbff;
+}
+@media screen and (min-width: 768px) {
+  .concept {
+    padding: 100px 0;
+  }
+}
+
+.concept__inner {
+  padding: 0 20px;
+}
+@media screen and (min-width: 768px) {
+  .concept__inner {
+    padding: 0 30px;
+    max-width: 1040px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .concept__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: clamp(10px, 6.25vw, 80px);
+  }
+}
+
+.concept__img {
+  text-align: center;
+}
+.concept__img img {
+  width: 310px;
+}
+@media screen and (min-width: 768px) {
+  .concept__img img {
+    width: 450px;
+  }
+}
+
+.concept__title {
+  color: #228ddd;
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 30px;
+}
+@media screen and (min-width: 768px) {
+  .concept__title {
+    font-size: 26px;
+    margin-top: 0;
+  }
+}
+
+.concept__text {
+  color: #333;
+  font-size: 15px;
+  line-height: 2;
+  margin-top: 30px;
+}
+
+.concept__button {
+  text-align: center;
+  margin-top: 29px;
+  margin-right: 27px;
+}
+@media screen and (min-width: 768px) {
+  .concept__button {
+    margin-top: 36px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .concept__button {
+    -moz-text-align-last: left;
+         text-align-last: left;
+  }
+}
+.concept__button a {
+  color: #f6f7f7;
+  font-weight: 700;
+  letter-spacing: 3px;
+  display: inline-block;
+  padding: 9px 53px;
+  border-radius: 48px;
+  -webkit-box-shadow: 4px 3px 26px 0px rgba(0, 0, 0, 0.16);
+          box-shadow: 4px 3px 26px 0px rgba(0, 0, 0, 0.16);
+  background: -webkit-gradient(linear, left top, right top, color-stop(1.75%, #2188de), color-stop(97.75%, #2bcbc6));
+  background: linear-gradient(90deg, #2188de 1.75%, #2bcbc6 97.75%);
+}
