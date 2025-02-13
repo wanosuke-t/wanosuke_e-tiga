@@ -542,13 +542,12 @@ body {
 .news__pagination {
   margin-top: 46px;
   display: flex;
-  gap: 20px;
-  padding: 0 13px;
-  flex-wrap: wrap;
+  gap: clamp(6px, calc((20 - 6) / (428 - 320) * (100vw - 320px) + 6px), 20px);
+  justify-content: center;
 
   @include mq(pc) {
     margin-top: 0;
-    padding: 0;
+    justify-content: left;
   }
 }
 
