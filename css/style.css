@@ -1041,3 +1041,57 @@ body {
   background: -webkit-gradient(linear, left top, right top, color-stop(1.75%, #2188de), color-stop(97.75%, #2bcbc6));
   background: linear-gradient(90deg, #2188de 1.75%, #2bcbc6 97.75%);
 }
+
+.cta {
+  background: -webkit-gradient(linear, left top, right top, from(#2390dc), to(#2bc8c8));
+  background: linear-gradient(90deg, #2390dc 0%, #2bc8c8 100%);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 768px) {
+  .cta {
+    padding-top: 80px;
+    padding-bottom: 79px;
+  }
+}
+
+.cta__inner {
+  text-align: center;
+}
+
+.cta__lead {
+  color: #fff;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 2.6px;
+  line-height: 44px;
+}
+
+.cta__text {
+  margin-top: 8px;
+  color: #fff;
+  letter-spacing: 1.6px;
+  line-height: 27px;
+}
+
+.cta__button {
+  margin-top: 18px;
+}
+@media screen and (min-width: 768px) {
+  .cta__button {
+    margin-top: 17px;
+  }
+}
+.cta__button a {
+  display: inline-block;
+  color: #f6f7f7;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 27px;
+  text-align: center;
+  padding: 7px 51px;
+  border-radius: 50px;
+  border: 2px solid #fff;
+  -webkit-box-shadow: 4px 3px 26px 0px rgba(0, 0, 0, 0.16);
+          box-shadow: 4px 3px 26px 0px rgba(0, 0, 0, 0.16);
+}

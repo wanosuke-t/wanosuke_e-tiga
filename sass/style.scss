@@ -681,7 +681,11 @@ body {
     @include mq(sp) {
       @include mq(sp) {
         padding: 9px
-          clamp(40px, calc((53 - 40) / (428 - 320) * (100vw - 320px) + 40px), 53px);
+          clamp(
+            40px,
+            calc((53 - 40) / (428 - 320) * (100vw - 320px) + 40px),
+            53px
+          );
       }
     }
   }
@@ -973,5 +977,57 @@ body {
     border-radius: 50px;
     box-shadow: 4px 3px 26px 0px rgba(0, 0, 0, 0.16);
     background: linear-gradient(90deg, #2188de 1.75%, #2bcbc6 97.75%);
+  }
+}
+
+// cta
+.cta {
+  background: linear-gradient(90deg, #2390dc 0%, #2bc8c8 100%);
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include mq(pc) {
+    padding-top: 80px;
+    padding-bottom: 79px;
+  }
+}
+
+.cta__inner {
+  text-align: center;
+}
+
+.cta__lead {
+  color: #fff;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 2.6px;
+  line-height: 44px;
+}
+
+.cta__text {
+  margin-top: 8px;
+  color: #fff;
+  letter-spacing: 1.6px;
+  line-height: 27px;
+}
+
+.cta__button {
+  margin-top: 18px;
+
+  @include mq(pc) {
+    margin-top: 17px;
+  }
+
+  a {
+    display: inline-block;
+    color: #f6f7f7;
+    font-weight: 700;
+    letter-spacing: 3px;
+    line-height: 27px;
+    text-align: center;
+    padding: calc(9px - 2px) calc(53px - 2px);
+    border-radius: 50px;
+    border: 2px solid #fff;
+    box-shadow: 4px 3px 26px 0px rgba(0, 0, 0, 0.16);
   }
 }
