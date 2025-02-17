@@ -35,3 +35,10 @@ $(window).on("resize", function () {
     });
   }
 });
+
+// ハンバーガーメニュー
+$("#js-drawer-icon").on("click", function (e) {
+  e.preventDefault(); 
+  $(this).toggleClass("is-checked");
+  $("#js-drawer-content").toggleClass("is-checked");
+});
