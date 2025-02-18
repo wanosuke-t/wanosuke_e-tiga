@@ -1223,13 +1223,15 @@ body {
 }
 
 .qanda-box__q {
-  list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   border-radius: 10px;
   background: var(--rgb-255255255, #fff);
   position: relative;
+}
+.qanda-box__q::marker {
+  display: none;
 }
 .qanda-box__q::before, .qanda-box__q::after {
   position: absolute;

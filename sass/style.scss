@@ -1157,11 +1157,15 @@ body {
 }
 
 .qanda-box__q {
-  list-style: none;
+  // list-style: none;
   display: flex;
   border-radius: 10px;
   background: var(--rgb-255255255, #fff);
   position: relative;
+
+  &::marker {
+    display: none;
+  }
 
   &::before,
   &::after {
