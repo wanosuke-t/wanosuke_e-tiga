@@ -1223,6 +1223,7 @@ body {
 }
 
 .qanda-box__q {
+  list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1230,7 +1231,7 @@ body {
   background: var(--rgb-255255255, #fff);
   position: relative;
 }
-.qanda-box__q::marker {
+.qanda-box__q::-webkit-details-marker {
   display: none;
 }
 .qanda-box__q::before, .qanda-box__q::after {
