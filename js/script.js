@@ -38,7 +38,24 @@ $(window).on("resize", function () {
 
 // ハンバーガーメニュー
 $("#js-drawer-icon").on("click", function (e) {
-  e.preventDefault(); 
+  e.preventDefault();
   $(this).toggleClass("is-checked");
   $("#js-drawer-content").toggleClass("is-checked");
+});
+
+
+// アコーディオン
+$(".js-accordion").click(function (e) {
+  e.preventDefault();
+
+  if ($(this).parent().attr("open")) {
+    $(this)
+      .next()
+      .slideUp( function () {
+        $(this).parent().removeAttr("open");
+      });
+  } else {
+    $(this).parent().attr("open", "true");
+    $(this).next().hide().slideDown();
+  }
 });

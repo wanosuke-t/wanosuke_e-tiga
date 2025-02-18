@@ -1096,3 +1096,149 @@ body {
     box-shadow: 4px 3px 26px 0px rgba(0, 0, 0, 0.16);
   }
 }
+
+// qanda
+.qanda {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background: #f4fbff;
+
+  @include mq(pc) {
+    padding-top: 100px;
+    padding-bottom: 121px;
+  }
+}
+
+.qanda__inner {
+  @include mq(pc) {
+    padding: 0 30px;
+    max-width: calc(800px + 30px * 2);
+    margin: 0 auto;
+  }
+}
+
+.qanda__title {
+  font-size: 36px;
+
+  &::after {
+    bottom: -5px;
+    left: 50%;
+  }
+}
+
+.qanda__list {
+  margin-top: 51px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  @include mq(pc) {
+    margin-top: 48px;
+    gap: 20px;
+  }
+}
+
+.qanda__item {
+}
+
+.qanda-box {
+  padding: 0 15px;
+  transition: all 0.3s;
+
+  @include mq(pc) {
+    padding: 0;
+  }
+
+  &[open] {
+    .qanda-box__q::after {
+      transform: translateY(-50%) rotate(0deg);
+    }
+  }
+}
+
+.qanda-box__q {
+  list-style: none;
+  display: flex;
+  border-radius: 10px;
+  background: var(--rgb-255255255, #fff);
+  position: relative;
+
+  &::before,
+  &::after {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 20px;
+    height: 2px;
+    background: #2392db;
+    border-radius: 1px;
+    top: 50%;
+    transform: translateY(-50%) rotate(0);
+    right: 10px;
+
+    @include mq(pc) {
+      right: 14px;
+    }
+  }
+
+  &::after {
+    transform: rotate(-90deg);
+    transition: all 0.3s;
+  }
+}
+
+.qanda-box__q-icon {
+  color: #fff;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 100%;
+  border-radius: 10px 0px 0px 10px;
+  background: #238fdc;
+  width: 50px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 5px;
+
+  @include mq(pc) {
+    width: 71px;
+  }
+}
+
+.qanda-box__q-text {
+  font-size: 15px;
+  line-height: 26px;
+  padding: 10px 42px 10px 10px;
+  flex-grow: 1;
+
+  @include mq(pc) {
+    font-size: 16px;
+    line-height: 169%;
+    padding: 12px 55px 12px 14px;
+  }
+}
+
+.qanda-box__a {
+  margin-top: 12px;
+  padding-left: 20px;
+
+  @include mq(pc) {
+    margin-top: 6px;
+    padding-left: 41px;
+  }
+}
+
+.qanda-box__a-text {
+  font-size: 14px;
+  line-height: 24px;
+  padding: 10px;
+  border-radius: 10px;
+  background: #fff;
+
+  @include mq(pc) {
+    font-size: 16px;
+    line-height: 169%;
+    padding: 12px 14px;
+  }
+}
