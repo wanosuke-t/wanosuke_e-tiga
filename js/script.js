@@ -43,7 +43,6 @@ $("#js-drawer-icon").on("click", function (e) {
   $("#js-drawer-content").toggleClass("is-checked");
 });
 
-
 // アコーディオン
 $(".js-accordion").click(function (e) {
   e.preventDefault();
@@ -51,11 +50,36 @@ $(".js-accordion").click(function (e) {
   if ($(this).parent().attr("open")) {
     $(this)
       .next()
-      .slideUp( function () {
+      .slideUp(function () {
         $(this).parent().removeAttr("open");
       });
   } else {
     $(this).parent().attr("open", "true");
     $(this).next().hide().slideDown();
   }
+});
+
+// スワイパー
+const swiper = new Swiper(".swiper", {
+  spaceBetween: 18,
+  slidesPerView: 1.5,
+  
+  // Optional parameters
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: ".swiper-scrollbar",
+  },
 });

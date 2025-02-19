@@ -1141,6 +1141,10 @@ body {
 .qanda__item {
 }
 
+:root {
+  interpolate-size: allow-keywords;
+}
+
 .qanda-box {
   padding: 0 15px;
   transition: all 0.3s;
@@ -1149,10 +1153,22 @@ body {
     padding: 0;
   }
 
+  &::details-content {
+    overflow: clip;
+    block-size: 0;
+    transition-duration: 0.3s;
+    transition-property: content-visibility, block-size;
+    transition-behavior: allow-discrete;
+  }
+
   &[open] {
     .qanda-box__q::after {
       transform: translateY(-50%) rotate(0deg);
     }
+  }
+
+  &[open]::details-content {
+    block-size: unset;
   }
 }
 
@@ -1244,111 +1260,5 @@ body {
     font-size: 16px;
     line-height: 169%;
     padding: 12px 14px;
-  }
-}
-
-// case
-.case {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  background: #f8f8f8;
-}
-
-.case__inner {
-  // padding: 0 20px;
-}
-
-.case__slider {
-  margin-top: 50px;
-}
-
-.case__swiper {
-}
-
-.case__swiper-wrapper {
-}
-
-.case__slide {
-  padding-bottom: 42px;
-}
-
-.case__card-wrapper {
-  margin-left: 20px;
-}
-
-.case-card {
-  border-radius: 4px;
-  background: #fff;
-}
-
-.case-card__img {
-}
-
-.case-card__text {
-  padding: 14px 10px;
-}
-
-.case-card__headline {
-  color: #228ddd;
-  font-size: 15px;
-  font-weight: 700;
-}
-
-.case-card__client {
-  margin-top: 10px;
-  font-size: 12px;
-}
-
-.case-card__client-company {
-  font-weight: 700;
-}
-
-.case-card__client-person {
-  font-weight: 700;
-}
-
-.case-card__industry {
-  margin-top: 10px;
-  color: #9d9d9d;
-  font-size: 12px;
-}
-
-.case__pagination {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  bottom: 0 !important;
-
-  .swiper-pagination-bullet {
-    width: 12px;
-    height: 12px;
-    margin: 0 !important;
-  }
-
-  .swiper-pagination-bullet-active {
-    background: #2f7dc8;
-  }
-}
-
-.case__prev {
-}
-
-.case__next {
-}
-
-.case__link {
-  margin-top: 30px;
-  text-align: center;
-
-  a {
-    display: inline-block;
-    color: #2392db;
-    font-family: "Noto Sans JP";
-    font-weight: 700;
-    letter-spacing: 3px;
-    border-radius: 2px;
-    border: 1px solid #2392db;
-    box-shadow: 4px 3px 26px 0px rgba(0, 0, 0, 0.16);
-    padding: 8px 53px;
   }
 }

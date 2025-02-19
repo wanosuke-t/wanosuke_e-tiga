@@ -18,6 +18,7 @@
     />
 
     <!-- css -->
+    <link rel="stylesheet" href="./css/lib/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
@@ -514,7 +515,7 @@
     </section>
     <!-- cta -->
     <section class="cta">
-      <div class="cta__inner inner">
+      <div class="cta__inner">
         <p class="cta__lead">まずは無料お試し</p>
         <p class="cta__text">ライトプランなら無料でお使いいただけます。</p>
         <div class="cta__button">
@@ -590,7 +591,94 @@
         </ul>
       </div>
     </section>
+    <!-- case -->
+    <section class="case">
+      <div class="case__inner">
+        <h2 class="title">
+          <span class="title-main">CASESTUDY</span>
+          <span class="title-sub">お客様の声</span>
+        </h2>
+        <div class="case__slider">
+          <!-- Slider main container -->
+          <div class="swiper case__swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper case__swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide case__slide">
+                <div class="case__card">
+                  <div class="case-card">
+                    <div class="case-card__img">
+                      <img src="./img/card-1-img.jpg" alt="" />
+                    </div>
+                    <div class="case-card__text">
+                      <h3 class="case-card__headline">
+                        在宅でも団結したチームワークに。
+                      </h3>
+                      <p class="case-card__client">
+                        <span class="case-card__client-company"
+                          >〇〇株式会社</span
+                        >
+                        <span class="case-card__client-person">吉本様</span>
+                      </p>
+                      <p class="case-card__industry">情報通信業</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide case__slide">
+                <div class="case-card">
+                  <div class="case-card__img">
+                    <img src="./img/card-2-img.jpg" alt="" />
+                  </div>
+                  <div class="case-card__text">
+                    <h3 class="case-card__headline">
+                      1日2時間分の処理時間の削減に成功
+                    </h3>
+                    <p class="case-card__client">
+                      <span class="case-card__client-company"
+                        >〇〇株式会社</span
+                      >
+                      <span class="case-card__client-person">竹内様</span>
+                    </p>
+                    <p class="case-card__industry">情報通信業</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide case__slide">
+                <div class="case-card">
+                  <div class="case-card__img">
+                    <img src="./img/card-3-img.jpg" alt="" />
+                  </div>
+                  <div class="case-card__text">
+                    <h3 class="case-card__headline">導入から1年で残業0へ。</h3>
+                    <p class="case-card__client">
+                      <span class="case-card__client-company"
+                        >〇〇株式会社</span
+                      >
+                      <span class="case-card__client-person">三島様</span>
+                    </p>
+                    <p class="case-card__industry">情報通信業</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- If we need pagination -->
+            <div class="swiper-pagination case__pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev case__prev"></div>
+            <div class="swiper-button-next case__next"></div>
+          </div>
+        </div>
+        <div class="case__link">
+          <a href="">全てみる</a>
+        </div>
+      </div>
+    </section>
+
     <!-- js -->
+    <script src="./js/lib/swiper-bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="./js/script.js" defer></script>
   </body>
