@@ -1252,24 +1252,61 @@ body {
   padding-top: 60px;
   padding-bottom: 60px;
   background: #f8f8f8;
+
+  @include mq(pc) {
+    padding-top: 100px;
+  }
 }
 
 .case__inner {
-  // padding: 0 20px;
+  padding: 0 20px;
+
+  @include mq(pc) {
+    padding: 0 30px;
+    max-width: calc(1120px + 30px * 2);
+    margin: 0 auto;
+  }
+}
+
+.case__title {
+  padding: 0 10px;
+
+  @include mq(pc) {
+    padding: 0;
+  }
 }
 
 .case__slider {
   margin-top: 50px;
+
+  @include mq(pc) {
+    margin-top: 40px;
+  }
 }
 
 .case__swiper {
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-left: -8px;
+  padding-bottom: 42px;
+
+  @include mq(pc) {
+    padding-left: 62px;
+    padding-right: 62px;
+    margin-left: 0;
+    padding-bottom: 58px;
+  }
 }
 
 .case__swiper-wrapper {
 }
 
 .case__slide {
-  padding-bottom: 42px;
+  max-width: 320px;
+
+  @include mq(pc) {
+    max-width: auto;
+  }
 }
 
 .case__card-wrapper {
@@ -1297,6 +1334,10 @@ body {
 .case-card__client {
   margin-top: 10px;
   font-size: 12px;
+
+  @include mq(pc) {
+    margin-top: 13px;
+  }
 }
 
 .case-card__client-company {
@@ -1305,12 +1346,17 @@ body {
 
 .case-card__client-person {
   font-weight: 700;
+  margin-left: 7px;
 }
 
 .case-card__industry {
   margin-top: 10px;
   color: #9d9d9d;
   font-size: 12px;
+
+  @include mq(pc) {
+    margin-top: 8px;
+  }
 }
 
 .case__pagination {
@@ -1330,15 +1376,38 @@ body {
   }
 }
 
+.case__prev,
+.case__next {
+  width: 44px;
+  height: 44px;
+  margin-top: -42px;
+
+  @include mq(pc) {
+    display: block;
+  }
+
+  &::after {
+    display: none;
+  }
+}
+
 .case__prev {
+  background: url("../img/prev.svg") no-repeat center center / contain;
+  left: 0;
 }
 
 .case__next {
+  background: url("../img/next.svg") no-repeat center center / contain;
+  right: 0;
 }
 
 .case__link {
   margin-top: 30px;
   text-align: center;
+
+  @include mq(pc) {
+    margin-top: 24px;
+  }
 
   a {
     display: inline-block;

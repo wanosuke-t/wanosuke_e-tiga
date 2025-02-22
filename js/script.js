@@ -62,8 +62,14 @@ $(".js-accordion").click(function (e) {
 // スワイパー
 const swiper = new Swiper(".swiper", {
   spaceBetween: 18,
-  slidesPerView: 1.5,
-  
+
+  slidesPerView: "auto",
+  breakpoints: {
+    768: {
+      slidesPerView: 3,
+    },
+  },
+
   // Optional parameters
   loop: true,
 
