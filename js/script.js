@@ -118,3 +118,42 @@ tabLinks.forEach(function (tabLink) {
     document.getElementById(tabId).classList.add(activeClass);
   });
 });
+
+// スムーススクロール
+$('#js-drawer-content a[href^="#"]').on("click", function (e) {
+  $("#js-drawer-icon").removeClass("is-checked");
+  $("#js-drawer-content").removeClass("is-checked");
+});
+
+$('a[href^="#"]').on("click", function (e) {
+  e.preventDefault();
+  const scrollSpeed = 1000;
+  const targetId = $(this).attr("href");
+  const targetElement = $("#" == targetId ? "html" : targetId);
+  const targetPosition = targetElement.offset().top;
+
+  if (targetElement.length) {
+    $("html, body").animate(
+      {
+        scrollTop: targetPosition,
+      },
+      scrollSpeed,
+      "swing"
+    );
+  }
+});
+
+// フェードアニメーション
+const intersectionObserver = new IntersectionObserver(function (entries) {
+  entries.forEach(function (entry) {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("is-in-view");
+    }
+  });
+});
+
+const inViewItems = document.querySelectorAll(".js-in-view");
+
+inViewItems.forEach(function (inViewItem) {
+  intersectionObserver.observe(inViewItem);
+});

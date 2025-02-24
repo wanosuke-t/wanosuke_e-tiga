@@ -32,10 +32,10 @@
           </h1>
           <!-- ナビメニュー -->
           <nav class="header__nav">
-            <a href="" class="header__link current-item">e-tigaとは</a>
-            <a href="" class="header__link">ご利用の流れ</a>
-            <a href="" class="header__link">プラン</a>
-            <a href="" class="header__link">運営会社</a>
+            <a href="#concept" class="header__link current-item">e-tigaとは</a>
+            <a href="#case" class="header__link">ご利用の流れ</a>
+            <a href="#price" class="header__link">プラン</a>
+            <a href="#company" class="header__link">運営会社</a>
           </nav>
           <span class="header__slide-line"></span>
 
@@ -55,10 +55,10 @@
           <img src="./img/logo-white.png" alt="" />
         </div>
         <nav class="drawer-content__menu">
-          <a href="" class="drawer-content__link">e-tigaとは</a>
-          <a href="" class="drawer-content__link">ご利用の流れ</a>
-          <a href="" class="drawer-content__link">プラン</a>
-          <a href="" class="drawer-content__link">運営会社</a>
+          <a href="#concept" class="drawer-content__link">e-tigaとは</a>
+          <a href="#case" class="drawer-content__link">ご利用の流れ</a>
+          <a href="#price" class="drawer-content__link">プラン</a>
+          <a href="#company" class="drawer-content__link">運営会社</a>
         </nav>
       </div>
 
@@ -95,7 +95,7 @@
     <!-- news -->
     <section class="news">
       <div class="news__inner">
-        <h2 class="news__title">NEWS</h2>
+        <h2 class="news__title js-in-view fade-in-up">NEWS</h2>
         <ul class="news__list">
           <li class="news__item">
             <time class="news__date" datetime="2022-12-15">2022年12月15日</time>
@@ -186,14 +186,14 @@
     </section>
 
     <!-- concept -->
-    <section class="concept">
+    <section id="concept" class="concept">
       <div class="concept__inner">
         <div class="concept__wrapper">
           <div class="concept__img">
             <img src="./img/concept-img.png" alt="" />
           </div>
           <div class="concept__content">
-            <h2 class="concept__title">
+            <h2 class="concept__title js-in-view fade-in-up">
               名刺作成から、<br />スケジュール管理、<br />経理までを簡単スピーディーに。
             </h2>
             <p class="concept__text">
@@ -208,9 +208,9 @@
     </section>
 
     <!-- case -->
-    <section class="case">
+    <section id="case" class="case">
       <div class="case__inner">
-        <h2 class="case__title title">
+        <h2 class="case__title title js-in-view fade-in-up">
           <span class="title-main">CASESTUDY</span>
           <span class="title-sub">お客様の声</span>
         </h2>
@@ -294,9 +294,9 @@
     </section>
 
     <!-- price -->
-    <section class="price">
+    <section id="price" class="price">
       <div class="price__inner">
-        <h2 class="title">
+        <h2 class="title js-in-view fade-in-up">
           <span class="title-main">PRICE</span>
           <span class="title-sub">料金</span>
         </h2>
@@ -421,15 +421,15 @@
     </section>
 
     <!-- company -->
-    <section class="company">
+    <section id="company" class="company">
       <div class="company__inner">
-        <h2 class="company__title">
+        <h2 class="company__title js-in-view fade-in-up">
           <span class="title-main">COMPANY</span>
           <span class="title-sub">会社概要</span>
         </h2>
         <div class="company__tabs">
           <ul class="company__header" role="tablist">
-            <li class="company__tab-item ">
+            <li class="company__tab-item">
               <button data-tab="tab1" class="company__tab-link is-tab-active">
                 <span class="company__tab-icon"></span>
                 <span class="company__tab-text">会社概要</span>
@@ -543,7 +543,7 @@
     <!-- blog -->
     <section class="blog">
       <div class="blog__inner">
-        <h2 class="blog__title title">
+        <h2 class="blog__title title js-in-view fade-in-up">
           <span class="blog__title-main title-main">BLOG</span>
           <span class="blog__title-sub title-sub">ブログ</span>
         </h2>
@@ -652,7 +652,7 @@
     <!-- seminar -->
     <section class="seminar">
       <div class="seminar__inner">
-        <h2 class="title">
+        <h2 class="title js-in-view fade-in-up">
           <span class="title-main">SEMINAR</span>
           <span class="title-sub">セミナー</span>
         </h2>
@@ -727,7 +727,7 @@
     <!-- qanda -->
     <section class="qanda">
       <div class="qanda__inner">
-        <h2 class="qanda__title news__title">Q&A</h2>
+        <h2 class="qanda__title news__title js-in-view fade-in-up">Q&A</h2>
         <ul class="qanda__list">
           <li class="qanda__item">
             <details class="qanda-box" open>
@@ -792,6 +792,43 @@
         </ul>
       </div>
     </section>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__wrapper">
+          <div class="footer__info">
+            <div class="footer__logo">
+              <img src="./img/footer-logo.png" alt="" />
+            </div>
+            <div class="footer__info-contact">
+              <p class="footer__address"><span class="inline-block">住所：東京都〇〇区〇〇　</span><span class="inline-block">〇〇ビル4階</span></p>
+              <p class="footer__phone">TEL：0000-00-0000</p>
+              <p class="footer__fax">FAX：0000-00-0000</p>
+            </div>
+          </div>
+          <nav class="footer__nav">
+            <a href=""  class="footer__nav-item">お問い合わせ</a>
+            <a href=""  class="footer__nav-item">プライバシーポリシー</a>
+            <a href=""  class="footer__nav-item">特定商取引法</a>
+          </nav>
+          <div class="footer__sns">
+            <a href="" class="footer__sns-link"
+              ><img src="./img/sns-icon.png" alt=""
+            /></a>
+            <a href="" class="footer__sns-link"
+              ><img src="./img/sns-icon.png" alt=""
+            /></a>
+            <a href="" class="footer__sns-link"
+              ><img src="./img/sns-icon.png" alt=""
+            /></a>
+          </div>
+        </div>
+        <div class="footer__copyright">
+          <small>Copyright © 2023 デイトラ All rights reserved.</small>
+        </div>
+      </div>
+    </footer>
 
     <!-- js -->
     <script src="./js/lib/swiper-bundle.min.js"></script>
